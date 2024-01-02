@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gLw-cZ-3El">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Songs List-->
+        <scene sceneID="eLp-bB-rOM">
+            <objects>
+                <tableViewController id="Ufj-fr-EuA" customClass="SongListTableViewController" customModule="W2_D1_Playlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="JC8-NB-BEX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.3214823604" green="0.67823749779999998" blue="0.50599604850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="i3f-nx-Ka2">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e3O-40-Tkc">
+                                    <rect key="frame" x="16" y="4" width="382" height="132"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter song title..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgI-Jn-eBC">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="58"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter artist name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SiD-Fs-xS0">
+                                            <rect key="frame" x="0.0" y="74" width="382" height="58"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstItem="e3O-40-Tkc" firstAttribute="leading" secondItem="i3f-nx-Ka2" secondAttribute="leading" constant="16" id="YgS-0m-WFt"/>
+                                <constraint firstAttribute="bottom" secondItem="e3O-40-Tkc" secondAttribute="bottom" constant="4" id="jZv-XI-GB0"/>
+                                <constraint firstItem="e3O-40-Tkc" firstAttribute="top" secondItem="i3f-nx-Ka2" secondAttribute="top" constant="4" id="nZW-UW-5JA"/>
+                                <constraint firstAttribute="trailing" secondItem="e3O-40-Tkc" secondAttribute="trailing" constant="16" id="zAO-wN-OuI"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" textLabel="xyT-Wb-yx9" detailTextLabel="jgZ-YK-SRa" style="IBUITableViewCellStyleSubtitle" id="hN7-cW-fJ5">
+                                <rect key="frame" x="0.0" y="184.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hN7-cW-fJ5" id="zoV-52-acI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xyT-Wb-yx9">
+                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jgZ-YK-SRa">
+                                            <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.3214823604" green="0.67823749779999998" blue="0.50599604850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.3214823604" green="0.67823749779999998" blue="0.50599604850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ufj-fr-EuA" id="3An-km-x4X"/>
+                            <outlet property="delegate" destination="Ufj-fr-EuA" id="UxN-e1-xJk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Songs List" id="Hcc-se-P28">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w23-xZ-dl8">
+                            <connections>
+                                <action selector="addSongButtonTapped:" destination="Ufj-fr-EuA" id="DCe-85-7US"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="artistTextField" destination="SiD-Fs-xS0" id="D6P-BC-aUv"/>
+                        <outlet property="songTitleTextField" destination="FgI-Jn-eBC" id="jaz-5G-1T4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lpS-7A-uHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="brb-uj-q0T">
+            <objects>
+                <navigationController id="gLw-cZ-3El" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="owQ-2R-3XK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ufj-fr-EuA" kind="relationship" relationship="rootViewController" id="dqQ-jC-zqE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnC-jq-THn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-190" y="107"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
